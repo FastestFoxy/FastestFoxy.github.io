@@ -1,0 +1,39 @@
+body{
+	background-image: linear-gradient(#000000, #e33c05);
+}
+ 
+.dropdown-menu{
+	background-color: black;
+}
+
+.dropdown-item{
+	color: #dbc386;
+}
+.mb-2{
+	color: #e6a08a;
+}
+mark{
+	color: #40241b;
+}
+
+.jumbotron {
+  background-image: url(../img/den4.png);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+
+}
+
+
+
+#i1{
+	filter: grayscale(100%);
+}
+
+#i2{
+	filter: saturate(150%);
+}
+
+#i3{
+	filter: invert(75%);
+}
