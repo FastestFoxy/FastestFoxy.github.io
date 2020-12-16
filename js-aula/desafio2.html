@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desafio 2</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>1)</h3>
+        <button onclick="f1();">Square</button>
+        <p id="1"></p>
+
+        <h3>2)</h3>
+        <button onclick="f2();">Square</button>
+        <p id="2"></p>
+
+        <h3 id="3" >3)</h3>
+
+        <script>
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            function f1(){
+                var sqr= document.createElement("div");
+                sqr.style.width='100px';
+                sqr.style.height='100px';
+                sqr.style.backgroundColor ='red';
+                sqr.style.margin='5px';
+                var elemet1 = document.getElementById("1");
+                elemet1.appendChild(sqr);
+            }
+
+            function f2(){
+                var sqr= document.createElement("div");
+                sqr.style.width='100px';
+                sqr.style.height='100px';
+                sqr.onmouseover = function sqrcolor(){sqr.style.backgroundColor = getRandomColor();};
+                sqr.style.backgroundColor ='red';
+                sqr.style.margin='5px';
+                var elemet1 = document.getElementById("2");
+                elemet1.appendChild(sqr);
+            }
+
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var father= document.getElementById("3");
+
+            var lista= document.createElement("ul");
+            var li= document.createElement("li");
+
+            for(var x=0; x<3; x++){
+                var li= document.createElement("li");
+
+                var name = nomes[x];
+                li.innerHTML = name;
+                console.log(x);
+            
+            
+                lista.appendChild(li);
+                father.appendChild(lista);
+            }
+
+        </script>
+    </body>
+</html>

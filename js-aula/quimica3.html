@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quimica Problema 3</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>Reagente Limitante</h3>
+        
+        <input id="c1" type="text" name="componente1" placeholder="0.5">
+        <label for="componete1">mol de O2 + </label>
+        <input id="c2" type="text" name="componente2" placeholder="1">
+        <label for="componete2" id="result" >mol de H2 ==> 18 gramas de H2O</label><br>
+        <button onclick="limit();">Calcular</button>
+
+        <script>
+            console.log("A");
+            function limit(){
+                o2=document.getElementById("c1").value;
+                h2=document.getElementById("c2").value;
+                o2==""?o2=0.5:o2=o2;
+                h2==""?h2=1:h2=h2;
+
+                var x= o2*2;
+
+                if(x>h2){
+                    var limite="O limitante é o Hidrogênio."
+
+                    var produto= h2*18;
+
+                    var resto=" + " + (o2-h2/2)*32 + " gramas de O2";
+
+                    var a1="" ;
+                    a1+="\n\n O2 --------- H2";
+                    a1+="\n 0.5 mol --------- 1 mol";
+                    a1+="\n "+ o2 +" mol --------- x";
+                    a1+="\n\n x= "+ o2 + " * 2";
+                    a1+="\n x= " + x + " mol de H2";
+                    a1+="\n\n "+ x +" > " + h2;
+                    a1+="\n ";
+                    a1+="\n\n H2 --------- H2O";
+                    a1+="\n 1 mol --------- 18 gramas";
+                    a1+="\n "+ h2 +" mol --------- x";
+                    a1+="\n\n x= "+ h2*18 + " gramas de H2O";
+                    a1+="\n\n O2 --------- H2";
+                    a1+="\n 0.5 mol --------- 1 mol";
+                    a1+="\n x --------- "+ h2 +" mol";
+                    a1+="\n\n x= "+ h2 + " / 2";
+                    a1+="\n x= " + h2/2 + " mol de O2";
+                    a1+="\n\n O2 restante= ("+ h2/2 +" - "+ o2 +") * 32 gramas";
+                    a1+="\n O2 restante= " + ( o2  -  h2/2 ) * 32 + " gramas";
+                }
+                else if(x<h2){
+                    var limite="O limitante é o Oxigênio.";
+
+                    var produto= (o2*2)*18;
+
+                    var resto= " + " + (h2-o2*2 ) * 2 + " gramas de H2";
+
+                    var a1="" ;
+                    a1+="\n\n O2 --------- H2";
+                    a1+="\n 0.5 mol --------- 1 mol";
+                    a1+="\n "+ o2 +" mol --------- x";
+                    a1+="\n\n x= "+ o2 + " * 2";
+                    a1+="\n x= " + x + " mol de H2";
+                    a1+="\n\n "+ x +" < " + h2;
+                    a1+="\n ";
+                    a1+="\n\n H2 --------- H2O";
+                    a1+="\n 0.5 mol --------- 18 gramas";
+                    a1+="\n "+ o2 +" mol --------- x";
+                    a1+="\n\n x= "+ (o2*2)*18 + " gramas de H2O";
+                    a1+="\n\n O2 --------- H2";
+                    a1+="\n 0.5 mol --------- 1 mol";
+                    a1+="\n "+ o2 +" --------- x";
+                    a1+="\n\n x= "+ o2 + " * 2";
+                    a1+="\n x= " + o2*2 + " mol de H2";
+                    a1+="\n\n H2 restante= ("+ o2*2 +" - "+ h2 +") * 2 gramas";
+                    a1+="\n H2 restante= " + ( h2  -  o2*2 ) * 2 + " gramas";
+
+                }
+                else{
+                    var limite="Não há limitante."
+
+                    var produto= h2*18;
+
+                    var resto="";
+
+                    var a1="" ;
+                    a1+="\n\n O2 --------- H2";
+                    a1+="\n 0.5 mol --------- 1 mol";
+                    a1+="\n "+ o2 +" mol --------- x";
+                    a1+="\n\n x= "+ o2 + " * 2";
+                    a1+="\n x= " + x + " mol de H2";
+                    a1+="\n\n "+ x +" = " + h2;
+                    a1+="\n\n O2 restante= 0";
+                    a1+="\n H2 restante= 0";
+
+                    
+                }
+
+                a= document.getElementById("result");
+                a.innerHTML="mol de H2 ==> "+ produto +" gramas de H2O" + resto;
+
+                alert(limite+a1);
+
+            }
+        </script>
+    </body>
+</html>

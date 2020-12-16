@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quimica Problema 2</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>Reações Químicas da água</h3>
+
+        <P>Indique o numero de moléculas a ser utilizado: </P>
+        <p>Oxigênio: </p>
+        
+        <input  type="text" placeholder="0.5" id="o2">
+        <label for="r2" after="r1">x 6,02x10²³</label><br>
+        <button id="btn1" onclick="reação1();">Concluir</button>
+
+
+        <p>Hidrogênio: </p>
+        <input name="r2" type="text" placeholder="1" id="h2">
+        <label for="r2" after="r1">x 6,02x10²³</label><br>
+        <button id="btn2" onclick="reação2();">Concluir</button>
+
+        <script>
+            console.log("Teste Concluido");
+
+            function reação1(){
+                var o2 = document.getElementById("o2").value;
+                if(o2==="") o2=0.5;
+                o21=o2;
+                
+                o2*= 6.02 * Math.pow(10, 23);
+
+                var h2o= 2*(o2*(1*6.02*Math.pow(10, 23)))
+
+                var a1="A reação resultará em "+ h2o + " moléculas de água" ;
+                a1+="\n\n           O2            ---------         H2O";
+                a1+="\n 1/2 * 6,02*10²³ --------- 1 * 6,02*10²³";
+                a1+="\n " + o21 + " * 6,02*10²³ --------- x";
+                a1+="\n\n x= " + o21 + " * 2 * 1 * 6,02*10²³";
+                a1+="\n x= " + h2o;
+                console.log(o2);
+
+                alert(a1);
+            } ;
+
+            function reação2(){
+                var h2 = document.getElementById("h2").value;
+                if(h2==="") h2=1;
+                h21=h2;
+
+                h2*= 6.02 * Math.pow(10, 23);
+
+                h2o= 1*(h2*(1*6.02*Math.pow(10, 23)));
+
+                var a1="A reação resultará em "+ h2o + " moléculas de água";
+                a1+="\n\n        H2            ---------         H2O";
+                a1+="\n 1 * 6,02*10²³ --------- 1 * 6,02*10²³";
+                a1+="\n " + h21 + " * 6,02*10²³ --------- x";
+                a1+="\n\n x= " + h21 + " * 2 * 1 * 6,02*10²³";
+                a1+="\n x= " + h2o;
+                console.log(h2);
+
+                alert(a1);
+            }
+        </script>
+    </body>
+</html>
