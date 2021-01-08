@@ -7,58 +7,58 @@
 <body>
 	<h1>Transformações entre número de mol e massa (em gramas)</h1>
 	<h2>Elemento: Cádmio</h2>
-	<p>Número de mols: <span id="mol">1</span></p>
-	<p>Massa molar: <span id="massaMolar">112.41</span>g/mol</p>
-	<p>Calcule as transformações para alterar os valores, inserindo os dados no campo de sua escolha abaixo.<br>
-	Nota: cada 1 mol de Cd possui massa molar de 112.41g/mol.</p>
+	<p>Massa molar: 112.41g/mol</p>
+	<p>Número de mols: <span id="mol"></span> mol</p>
+	<p>Massa (em gramas): <span id="massa"></span>g</p>
+	<p>Calcule as transformações para alterar os valores, inserindo os dados no campo de sua escolha abaixo.<br></p>
 	<h3>MASSA PARA MOL</h3>
 	<input type="number" id="valMassa" placeholder="Insira valor de massa">
 	<button>Converter</button>
-
+	<h4>OU</h4>
 	<h3>MOL PARA MASSA</h3>
 	<input type="number" id="numMol" placeholder="Insira número de mols">
 	<button>Converter</button><br><br>
 
 
-<p style="font-weight: bold">Fórmulas: <br>
-	• Massa para mol <br><br>
+<h4>Fórmulas:</h4><br>
+	• <u>Massa para mol</u><br><br>
 
-	Proporção da massa por mol de Cd:<br>
-	112.41g ------------------------------- 1 mol<br>
-	Valor inserido (Y) em gramas --- X<br><br>
+	<b>Proporção da massa por mol de Cd:</b><br>
+	112.41g ------------ 1 mol<br>
+	<i>Massa inserida</i> --- X<br><br>
 
-	112.41*X = 1*Y<br>
-	112.41X = Y<br>
-	X = Y/112.41 (mol)<br><br><br>
+	112.41*X = 1*<i>Massa inserida</i><br>
+	112.41X = <i>Massa inserida</i><br>
+	X = <i>Massa inserida</i>/112.41 (mol)<br><br><br>
 
 
-	• Mol para massa<br><br>
+	• <u>Mol para massa</u><br><br>
 
-	Mesma proporção de massa por mol:<br>
-	112.41g --- 1 mol<br>
-	X ---------- Y mol<br><br>
+	<b>Mesma proporção de massa por mol:</b><br>
+	112.41g ---- 1 mol<br>
+	X ------------ <i>Mols inseridos</i><br><br>
 
-	X = Y*112.41 (g) 
+	X = <i>Mols inseridos</i>*112.41 (g) 
 </p>
 </body>
 
 <script>
 		var inputMassa = document.getElementById("valMassa");
 		var inputMol = document.getElementById("numMol");
-		var spanMassaMolar = document.getElementById("massaMolar");
+		var spanMassa = document.getElementById("massa");
 		var spanMol = document.getElementById("mol");
 
 	inputMassa.onchange = function(){
 		var proporcaoMassa = parseFloat(inputMassa.value);
 		var proporcaoMol = proporcaoMassa/112.41;
-		spanMassaMolar.innerHTML = proporcaoMassa;
+		spanMassa.innerHTML = proporcaoMassa;
 		spanMol.innerHTML = proporcaoMol;
 	}
 
 	inputMol.onchange = function(){
 		var proporcaoMol = parseFloat(inputMol.value);
 		var proporcaoMassa = proporcaoMol*112.41;
-		spanMassaMolar.innerHTML = proporcaoMassa;
+		spanMassa.innerHTML = proporcaoMassa;
 		spanMol.innerHTML = proporcaoMol;
 	}
 </script>

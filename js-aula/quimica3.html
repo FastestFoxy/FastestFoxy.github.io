@@ -31,23 +31,39 @@
                     var resto=" + " + (o2-h2/2)*32 + " gramas de O2";
 
                     var a1="" ;
+                    a1="\n\nCálculos: " ;
+                    a1+="\n\n\n Quanto de H2 é necessário para 100% de conversão com a quantidade dada de O2: ";
                     a1+="\n\n O2 --------- H2";
                     a1+="\n 0.5 mol --------- 1 mol";
                     a1+="\n "+ o2 +" mol --------- x";
-                    a1+="\n\n x= "+ o2 + " * 2";
+                    a1+="\n 0.5 *x= "+ o2 + " * 1";
+                    a1+="\n x= ("+ o2 + " * 1)/0.5 ";
+                    a1+="\n x= "+( o2 * 1)+"/0.5 ";
+                    a1+="\n x= "+( o2 * 1)/0.5 ;
                     a1+="\n x= " + x + " mol de H2";
-                    a1+="\n\n "+ x +" > " + h2;
+
+                    a1+="\n\n "+ x +" (Quantidade ideal de H2 para essa quantidade de O2) > " + h2 + " (Quantidade de H2 recebida)";
+
                     a1+="\n ";
+                    a1+="\n\n Quanto de H2O o H2 dado resulta em: ";
                     a1+="\n\n H2 --------- H2O";
                     a1+="\n 1 mol --------- 18 gramas";
                     a1+="\n "+ h2 +" mol --------- x";
-                    a1+="\n\n x= "+ h2*18 + " gramas de H2O";
+                    a1+="\n\n 1 * x= 18* "+ h2;
+                    a1+="\n x= (18* "+ h2 +")/1";
+                    a1+="\n x= "+ 18*h2 +"/1";
+                    a1+="\n x= "+ h2*18 + " gramas de H2O resultante";
+                    
+                    a1+="\n\n\n Quantidade de O2 para consumo de 100% do H2: ";
                     a1+="\n\n O2 --------- H2";
                     a1+="\n 0.5 mol --------- 1 mol";
                     a1+="\n x --------- "+ h2 +" mol";
-                    a1+="\n\n x= "+ h2 + " / 2";
-                    a1+="\n x= " + h2/2 + " mol de O2";
-                    a1+="\n\n O2 restante= ("+ h2/2 +" - "+ o2 +") * 32 gramas";
+                    a1+="\n\n 1 * x= "+ h2 + " * 0.5";
+                    a1+="\n x= ("+ h2 + " * 0.5)/1";
+                    a1+="\n x= "+ (h2*0.5) +"/1";
+                    a1+="\n x= "+ (h2*0.5)/1 + " mol de O2";
+                    
+                    a1+="\n\n O2 restante= ("+ h2/2 +" mol de O2 necessário - "+ o2 +" mol de O2 dado) * 32 gramas (massa molar do O2)";
                     a1+="\n O2 restante= " + ( o2  -  h2/2 ) * 32 + " gramas";
                 }
                 else if(x<h2){
@@ -58,23 +74,38 @@
                     var resto= " + " + (h2-o2*2 ) * 2 + " gramas de H2";
 
                     var a1="" ;
+                    a1="\n\nCálculos: " ;
+                    a1+="\n\n\n Quanto de H2 é necessário para 100% de conversão com a quantidade dada de O2: ";
                     a1+="\n\n O2 --------- H2";
                     a1+="\n 0.5 mol --------- 1 mol";
                     a1+="\n "+ o2 +" mol --------- x";
-                    a1+="\n\n x= "+ o2 + " * 2";
+                    a1+="\n 0.5 * x= "+ o2 + " * 1";
+                    a1+="\n x= ("+ o2 + " * 1)/0.5";
+                    a1+="\n x= "+ (o2* 1) +"/0.5";
                     a1+="\n x= " + x + " mol de H2";
-                    a1+="\n\n "+ x +" < " + h2;
+
+                    a1+="\n\n "+ x +" (Quantidade ideal de H2 para essa quantidade de O2) < " + h2 + " (Quantidade de H2 recebida)";
+
                     a1+="\n ";
-                    a1+="\n\n H2 --------- H2O";
+                    a1+="\n\n Quanto de H2O o O2 dado resulta em: ";
+                    a1+="\n\n O2 --------- H2O";
                     a1+="\n 0.5 mol --------- 18 gramas";
                     a1+="\n "+ o2 +" mol --------- x";
-                    a1+="\n\n x= "+ (o2*2)*18 + " gramas de H2O";
+                    a1+="\n\n 0.5 * x= "+ o2 + "*18 ";
+                    a1+="\n x= ("+ o2 + "*18)/0.5";
+                    a1+="\n x= "+ (o2*18)+ "/0.5";
+                    a1+="\n x= "+ (o2*2)*18 + " gramas de H2O";
+                    
+                    a1+="\n\n\n Quantidade de H2 para consumo de 100% do O2: ";
                     a1+="\n\n O2 --------- H2";
                     a1+="\n 0.5 mol --------- 1 mol";
-                    a1+="\n "+ o2 +" --------- x";
-                    a1+="\n\n x= "+ o2 + " * 2";
+                    a1+="\n "+ o2 +" mol --------- x";
+                    a1+="\n\n 0.5 * x= "+ o2 + " * 1";
+                    a1+="\n x= ("+ o2 + " * 1)/0.5";
+                    a1+="\n x= "+ (o2 * 1) +"/0.5";
                     a1+="\n x= " + o2*2 + " mol de H2";
-                    a1+="\n\n H2 restante= ("+ o2*2 +" - "+ h2 +") * 2 gramas";
+
+                    a1+="\n\n H2 restante= ("+ o2*2 +" mol de H2 necessário - "+ h2 +" mol de H2 dado) * 2 gramas (massa molar do H2)";
                     a1+="\n H2 restante= " + ( h2  -  o2*2 ) * 2 + " gramas";
 
                 }
@@ -86,14 +117,51 @@
                     var resto="";
 
                     var a1="" ;
+                    a1="\n\nCálculos: " ;
+                    a1+="\n\n\n Quanto de H2 é necessário para 100% de conversão com a quantidade dada de O2: ";
                     a1+="\n\n O2 --------- H2";
                     a1+="\n 0.5 mol --------- 1 mol";
                     a1+="\n "+ o2 +" mol --------- x";
-                    a1+="\n\n x= "+ o2 + " * 2";
+                    a1+="\n\n 0.5 * x= "+ o2 + " * 1";
+                    a1+="\n x= ("+ o2 + " * 1)/0.5";
+                    a1+="\n x= "+ (o2* 1) +"/0.5";
                     a1+="\n x= " + x + " mol de H2";
-                    a1+="\n\n "+ x +" = " + h2;
-                    a1+="\n\n O2 restante= 0";
-                    a1+="\n H2 restante= 0";
+
+                    a1+="\n\n "+ x +" (Quantidade ideal de H2 para essa quantidade de O2) = " + h2 + "(Quantidade de H2 recebida)";
+
+                    a1+="\n ";
+                    a1+="\n\n Quanto de H2O o O2 dado resulta em: ";
+                    a1+="\n\n O2 --------- H2O";
+                    a1+="\n 0.5 mol --------- 18 gramas";
+                    a1+="\n "+ o2 +" mol --------- x";
+                    a1+="\n\n 0.5 * x= "+ o2 + "*18 ";
+                    a1+="\n x= ("+ o2 + "*18)/0.5";
+                    a1+="\n x= "+ (o2*18)+ "/0.5";
+                    a1+="\n x= "+ (o2*2)*18 + " gramas de H2O";
+
+                    a1+="\n\n\n Quantidade de H2 para consumo de 100% do O2: ";
+                    a1+="\n\n O2 --------- H2";
+                    a1+="\n 0.5 mol --------- 1 mol";
+                    a1+="\n "+ o2 +" mol --------- x";
+                    a1+="\n\n 0.5 * x= "+ o2 + " * 1";
+                    a1+="\n x= ("+ o2 + " * 1)/0.5";
+                    a1+="\n x= "+ (o2 * 1) +"/0.5";
+                    a1+="\n x= " + o2*2 + " mol de H2";
+
+                    a1+="\n\n H2 restante= ("+ o2*2 +" mol de H2 necessário - "+ h2 +" mol de H2 dado) * 2 gramas (massa molar do H2)";
+                    a1+="\n H2 restante= " + ( h2  -  o2*2 ) * 2 + " gramas";
+
+                    a1+="\n\n Quantidade de O2 para consumo de 100% do H2: ";
+                    a1+="\n\n O2 --------- H2";
+                    a1+="\n 0.5 mol --------- 1 mol";
+                    a1+="\n x --------- "+ h2 +" mol";
+                    a1+="\n\n 1 * x= "+ h2 + " * 0.5";
+                    a1+="\n x= ("+ h2 + " * 0.5)/1";
+                    a1+="\n x= "+ (h2*0.5) +"/1";
+                    a1+="\n x= "+ (h2*0.5)/1 + " mol de O2";
+                    
+                    a1+="\n\n O2 restante= ("+ h2/2 +" mol de O2 necessário - "+ o2 +" mol de O2 dado) * 32 gramas (massa molar do O2)";
+                    a1+="\n O2 restante= " + ( o2  -  h2/2 ) * 32 + " gramas";
 
                     
                 }
