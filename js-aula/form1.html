@@ -1,0 +1,140 @@
+<!document html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulário 1</title>
+        
+        <!--<script src="../js/jquery-3.5.1.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+
+            $(function(){
+                var acervoArray=[];
+
+                $("#btnCadastrar").click(function(){
+
+                    let titulo = $("#titulo").val();
+                    let descricao = $("#descricao").val();
+                    let genero = $("#genero").val();
+                    let autor = $("#autor").val();
+                    let image = $("<img>").attr('src', 'lixeira.png');
+                    let acervo_post = $("#postAcervo").val();
+
+                    image.css('width', '1em');
+                        
+                    $("#acervo")
+                        .append($("<tr>")
+                                .addClass("livro")
+
+                            .append($("<td>")
+                                .attr("id", "1td")
+                                .text(titulo)
+                            )
+                            .append($("<td>")
+                                .attr("id", "2td")
+                                .text(descricao)
+                            )
+                            .append($("<td>")
+                                .attr("id", "3td")
+                                .text(genero)
+                            )
+                            .append($("<td>")
+                                .attr("id", "4td")
+                                .text(autor)
+                            )
+                            .append($("<td>")
+                                .append(image)
+                            )
+                        );
+
+                        $("#autorList")
+                            .append($("<option>")
+                                .val(autor)
+                            );
+                        
+                        
+                        titulo = $("#titulo").val("");
+                        descricao = $("#descricao").val("");
+                        autor = $("#autor").val("");
+
+                    $("#acervo").on("click", "img", function(){
+                        $(this).parents("#acervo tr").remove();
+                    })
+
+                    
+
+
+                });
+
+                
+
+                function Livro (titulo, desc, genero, autor){ 
+                    this.titulo = titulo; 
+                    this.descricao = desc; 
+                    this.genero = genero; 
+                    this.autor = autor; 
+                }
+
+                // var meuLivro = new Livro("O sumiço da santa", "Lorem Ipsum", "Romance", "Jorge Amado"); 
+                // console.log(meuLivro);
+
+                $("input[type=submit]").click(function(){
+
+                    var linhaLivros=$(".livro");
+                    console.log(linhaLivros);
+
+                    $.each($(".livro"), function(idx, linha){
+                    let tituloLinha = $(linha).children("#1td").text(); 
+                    let descricaoLinha = $(linha).children("#2td").text(); 
+                    let generoLinha = $(linha).children("#3td").text(); 
+                    let autorLinha = $(linha).children("#4td").text(); 
+
+
+                    let livro = new Livro(tituloLinha, descricaoLinha, generoLinha, autorLinha);
+                    acervoArray.push(livro); 
+                    })
+
+                    var acervoStr = JSON.stringify(acervoArray);
+
+                    $("input[name=acervo_post]").val(acervoStr);
+                });
+
+                
+            });
+        </script>
+    </head>
+    <body>
+        <h2>Cadastrar</h2>
+        <input id="titulo" type="text" placeholder="Título"><br>
+        <textarea id="descricao" placeholder="Descrição"></textarea><br>
+        <select id="genero">
+            <option value="Romance">Romance</option>
+            <option value="Drama">Drama</option>
+            <option value="Ficção">Ficção</option>
+            <option value="Técnico">Técnico</option>
+        </select><br>
+        <input id="autor" type="search" placeholder="Autor" list="autorList">
+            <datalist id="autorList">
+            </datalist>
+        <br>
+        <button id="btnCadastrar">Cadastrar</button>
+
+        <h3>Catálogo</h3>
+
+        <table id="acervo">
+            <tr>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Gênero</th>
+                <th>Autor</th>
+                <th></th>
+            </tr>
+        </table>
+
+        <form action="https://rafaelescalfoni.net/web/livros.php" method="POST">
+            
+            <input type="hidden" name="acervo_post">
+            <input type="submit" value="Salvar em BD">
+        </form>
+    </body>
+</html>

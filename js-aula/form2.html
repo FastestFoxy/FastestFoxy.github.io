@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dicionário</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <style>
+            
+            #esquerdo{
+                width: 25%;
+                float: left;
+            }
+
+        </style>
+
+        <script>
+            var glossario = [
+                {"id":1 
+                    , "termo":"W3C"
+                    ,  "definicao": "World Wide Web Consortium – escritório responsável por desenvolver normas técnicas para a Internet" 
+                    , "autor": "José Borges" 
+                    , "dataCriacao": "2015-04-01"} 
+            
+                , {"id":2 
+                    , "termo":"HTML" 
+                    , "definicao": "HyperText Markup Language – linguagem de marcação utilizada para estruturar páginas web" 
+                    , "autor": "Pedro Silva" 
+                    , "dataCriacao": "2017-05-12"} 
+
+                , {"id":3
+                    , "termo": "CSS" 
+                    , "definicao": "Cascade Style Sheet – Folhas de estilo utilizadas para configurar a visualização de  páginas web" 
+                    , "autor": "Maria Machado" 
+                    , "dataCriacao": "2018-10-11"}
+            
+            ]; 
+
+            $(function(){
+                $.each(glossario, function(idx, listElement){
+                    let newLi= listElement.termo;
+
+                    $("#theList")
+                        .append($("<li>")
+                            .addClass("listElement")
+                            .attr("id", listElement.id)
+                            .html(newLi)
+                        );
+                });
+
+                
+                $.each($(".listElement"), function(indice, coisa){
+                    let id= coisa.id;
+                    let selectorID= "#"+id;
+                    let glossarioID= id-1;
+                    
+
+                    $(selectorID)
+                    .on("click", function(){
+
+                        $("#direito").html("<h2>Definição</h2>");
+                        let criação= " Data de criação: " +glossario[glossarioID].dataCriacao + " - Autor do Post: " + glossario[glossarioID].autor;
+
+                        $("#direito")
+                            .append($("<h4>")
+                                .text(glossario[glossarioID].termo)
+                            )
+
+                            .append($("<p>")
+                                .text(glossario[glossarioID].definicao)
+                            )
+
+                            .append($("<i>")
+                                .append($("<p>")
+                                    .text(criação)
+                                )
+                            );
+                    });
+
+                        
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Dicionário Online</h1>
+        <div id="block">
+            <div id="esquerdo">
+                <h3>Termos cadastrados</h3>
+                <ul id="theList">
+                </ul>
+            </div>
+            <div id="direito">
+                <h2>Definição</h2>
+            </div>
+        </div>
+    </body>
+</html>
