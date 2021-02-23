@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Laboratório Jquery 2</title>
+            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+            <script src="../js/jquery-3.5.1.min.js"></script>
+            <script src="./desafio3-jquery-1.js"></script>
+
+            <style>
+                .scroller {
+                width: 20%;
+                min-height: min-content;
+                max-height: 200px;
+                overflow-y: scroll;
+                }
+
+                .data{
+                    width:5em;
+                }
+            </style>
+        </head>
+        <body>
+            <div id="d1">
+                1) Faça um programa que leia uma frase e escreva abaixo invertendo os caracteres - o primeiro se torna o último, o segundo o penúltimo e assim por diante.
+                <p>Frase de teste</p>
+                <button>Inverter</button>
+                
+            </div>
+
+            <div id="d2">
+                <br>
+                2) Faça um programa que leia uma frase e escreva abaixo marcando as vogais em negrito.
+                <p>Frase de teste</p>
+                <button>Marcar vogais</button>
+            </div>
+
+            <div id="d3">
+                <br>
+                3) Faça um programa que leia um texto e separe todas as palavras em um array, indicado para cada uma delas o número de vezes que aparece no texto. Imprima o array em uma tabela contendo a palavra e número de ocorrências.
+                <p>     Texto de teste: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet sapien ut ligula tincidunt dapibus. Nulla facilisi. Praesent nibh erat, luctus nec lorem ut, pulvinar tempor elit. Integer et quam sapien. Phasellus efficitur feugiat purus, sed posuere magna efficitur at. Aenean placerat sagittis velit vitae dictum. Integer rutrum metus urna, a varius sem laoreet sagittis. Quisque nec venenatis leo. Nulla fermentum massa sem, sit amet venenatis erat condimentum nec. Sed aliquam auctor arcu, eget accumsan quam. Quisque gravida mauris magna. Etiam commodo eu ipsum vel dignissim. </p>
+                <div  class="scroller">
+                    <table>
+                        <tr>
+                            <th>Palavra</th>
+                            <th>Ocorrências</th>
+                        </tr>
+                    </table>
+                </div>
+                <button>Contar Palavras</button>
+            </div>
+
+            <div id="d4">
+                <br>
+                4) Faça um programa que leia um texto e indique a palavra de maior ocorrência e quantas vezes ela apareceu no texto.
+                <p>     Texto de teste: Praesent velit nibh, elementum et lectus sodales, rhoncus tempor mi. Nam finibus rutrum felis vel ultricies. Curabitur nec libero tincidunt, fermentum dolor sed, egestas ipsum. Aenean in luctus elit. Maecenas ornare mi in odio semper, tristique ornare felis viverra. Phasellus elit dolor, finibus sit amet ante id, imperdiet viverra felis. Donec condimentum massa nulla, sed efficitur elit scelerisque suscipit. In dictum commodo tempus. Praesent id libero faucibus, dapibus nisi eu, suscipit dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In eleifend felis sit amet turpis bibendum, sed vulputate mauris malesuada. Donec at efficitur massa. Vestibulum elementum semper dapibus. Nunc posuere dolor nec orci blandit lacinia. Pellentesque fringilla libero sit amet leo pharetra venenatis. </p>
+                <p class="p"></p>
+                <button>Mostrar a mais comum</button>
+            </div>
+
+            <div id="d5">
+                <br>
+                5) Faça um programa que implemente a funcionalidade substituir em textos, ou seja, terá um campo "procurar" e um campo "substituir". Ao executar, seu programa deverá procurar as ocorrências no texto do valor digitado em "procurar" e trocar pelo valor digitado em "substituir".
+                <p>     Texto de teste: Vestibulum ultrices, eros in mollis lobortis, odio mauris malesuada velit, sit amet pharetra odio tellus non purus. Fusce diam velit, lacinia sit amet tortor eu, lacinia hendrerit elit. Praesent mattis varius metus et tristique. Vivamus congue sem vitae ligula ultricies malesuada. Morbi vel dui nulla. Donec rhoncus in orci vitae pharetra. Ut ut maximus mi.</p>
+                <input type="text" id="input1_5" placeholder="Procurar">
+                <input type="text" id="input2_5" placeholder="Substituir">
+                <button>Substituir</button>
+            </div>
+
+            <div id="d6">
+                <br>
+                6) Faça um programa que leia uma data de nascimento e retorne quantos dias de vida a pessoa tem.
+                <input type="number" name="dia" class="data" placeholder="Dia" min="1" max="31">
+                <input type="number" name="mes" class="data" placeholder="Mês" min="1" max="12">
+                <input type="number" name="ano" class="data" placeholder="Ano" min="0" max="9999">
+                <button>Calcular</button>
+            </div>
+
+            <div id="d7">
+                <br>
+                7) Faça um programa que leia uma data de nascimento em formato de dd/mm/aaaa e escreva por extenso a data.
+                <input type="number" name="dia" class="data" placeholder="Dia" min="1" max="31">
+                <input type="number" name="mes" class="data" placeholder="Mês" min="1" max="12">
+                <input type="number" name="ano" class="data" placeholder="Ano" min="0" max="9999">
+                <button>Escrever</button>
+            </div>
+            
+            <div id="d8">
+                <br>
+                8) Faça um programa que leia duas datas e indique em semanas a distância entre elas.
+                <br>
+                <input type="number" name="dia1" class="data" placeholder="Dia" min="1" max="31">
+                <input type="number" name="mes1" class="data" placeholder="Mês" min="1" max="12">
+                <input type="number" name="ano1" class="data" placeholder="Ano" min="0" max="9999">
+                <br>
+                <input type="number" name="dia2" class="data" placeholder="Dia" min="1" max="31">
+                <input type="number" name="mes2" class="data" placeholder="Mês" min="1" max="12">
+                <input type="number" name="ano2" class="data" placeholder="Ano" min="0" max="9999">
+                <br>
+                <button>Calcular</button>
+            </div>
+            
+            <div id="d9">
+                9) Faça uma caixa de texto que classifique:
+                <br>- fraca (em vermelho) se só possuir letras minúsculas ou maiúsculas
+                <br>- moderada (em laranja) se possuir letras minúsculas e maiúsculas e números
+                <br>- forte (em verde) se possuir letras minúsculas e maiúsculas, números e caracteres especiais (@, #, !, $, %, &, *, (, ), -, +, ., =)
+                <br><input type="text"> <p></p>
+                
+            </div>
+        </body>
+    </html>
