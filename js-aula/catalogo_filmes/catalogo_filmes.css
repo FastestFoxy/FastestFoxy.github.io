@@ -10,6 +10,7 @@ img{
 #big_div{
     background-color: white;
     width: 25%;
+    min-width: 100px;
     display: inline-block;
     margin: 20px;
 }
