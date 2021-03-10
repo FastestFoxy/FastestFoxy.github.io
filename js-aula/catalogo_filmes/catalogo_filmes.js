@@ -121,6 +121,10 @@ $(function(){
                                 .text(desc)
                             )
                         )
+                        
+                        .append($("<p>")
+                            .html("<a href=`../index.html`>Voltar</a>")
+                        )
                     )
         })
     })
