@@ -52,8 +52,6 @@ $(function(){
             if(item.classificacao>14&&item.classificacao<18){ clr="yellow"; BGclr="orange"}
             if(item.classificacao>=18){ clr="red"; BGclr="black"}
         
-            console.log(item.classificacao);
-
             $("body")  
                     .append($("<div>")
                         .attr("id", "big_div")
