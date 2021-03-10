@@ -1,0 +1,81 @@
+body{
+    color: black;
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+#big_div{
+    background-color: white;
+    width: 25%;
+    display: inline-block;
+    margin: 20px;
+}
+
+#image_div{
+    background-color: gray;
+    width: 15%;
+    position: relative;
+}
+
+#name_div{
+    background-color: whitesmoke;
+    width: 75%;
+    text-align: center;
+}
+
+#ratin_div{
+    background-color: black;
+    width: 10%;
+    position: relative;
+    margin:0;
+}
+
+#imageErating{
+    display: inline;
+    margin-right: 0;
+}
+
+#resume_div{
+    background-color: wheat;
+    width: 100%;
+}
+
+#elenco_div{
+    background-color: rgb(247, 229, 195);
+    width: 33%;
+}
+
+#genero_div{
+    background-color: rgb(214, 190, 144);
+    width: 33%;
+}
+
+#semelhante_div{
+    background-color: rgb(236, 207, 152);
+    width: 34%;
+}
+
+#resumeEelencoEgeneroEsemelhante{
+    display: inline;
+    margin-right: 0;
+}
+
+#stars_div{
+    background-color: #343a40;
+    width: 15%;
+    position: relative;
+}
+
+#coments_div{
+    background-color: teal;
+    width: 85%;
+    position: relative;
+}
+
+#starsEcoments{
+    display: inline;
+    margin-right: 0;
+}

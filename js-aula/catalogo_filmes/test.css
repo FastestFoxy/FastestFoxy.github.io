@@ -1,0 +1,72 @@
+#big_div{
+    background-color: white;
+    width: 50%;
+    border-radius: 5px;
+}
+
+#image_div{
+    background-color: gray;
+    width: 10%;
+    position: relative;
+    border-radius: 5px;
+}
+
+#name_div{
+    background-color: whitesmoke;
+    width: 80%;
+}
+
+#ratin_div{
+    background-color: red;
+    width: 10%;
+    position: relative;
+    border-radius: 5px;
+}
+
+#imageEnameErating{
+    display: inline;
+    margin-right: 0;
+}
+
+#resume_div{
+    background-color: wheat;
+    width: 100%;
+}
+
+#elenco_div{
+    background-color: rgb(247, 229, 195);
+    width: 33%;
+}
+
+#genero_div{
+    background-color: rgb(214, 190, 144);
+    width: 33%;
+}
+
+#semelhante_div{
+    background-color: rgb(236, 207, 152);
+    width: 34%;
+}
+
+#resumeEelencoEgeneroEsemelhante{
+    display: inline;
+    margin-right: 0;
+}
+
+#stars_div{
+    background-color: yellow;
+    width: 50%;
+    position: relative;
+}
+
+#coments_div{
+    background-color: teal;
+    width: 50%;
+    position: relative;
+    border-radius: 5px;
+}
+
+#starsEcoments{
+    display: inline;
+    margin-right: 0;
+}
