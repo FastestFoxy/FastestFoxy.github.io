@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="cap4.js"></script>
+    <script src="cap5.js"></script>
+    <title>Soluções</title>
+</head>
+<body>
+    <h1> Soluções</h1><br>
+    <h3>O que são?</h3><br>
+    <p><b>Soluções são misturas homogênias que podem ser encontradas nos estados de agregação gasoso, liquido e sólido.</b></p>
+    <p>É formada por dois componentes: o soluto (em menor quantidade) e o solvente (em maior), um completamente dissolvido no outro (soluto dissolvido no solvente). Em nossos exemplos o solvente será água e o soluo será KCl, cloreto de potássio.</p>
+    <p>Para conseguirmos uma solução, precisamos saber o coeficiente de solubilidade do soluto. Coeficiente de solubilidade é a medidade de capacidade que um soluto possui de se dissolver em uma quantidade-padrão de solvente, em determinadas condições de temperatura e pressão. No nosso caso, o coeficiente de solubilidade do KCl é de 34g/100g de água, à 20°C sob 1 atm.</p>
+    <h3>Relações entre soluto e a solução</h3>
+    <p>A concentração de uma solução é determinada pela relação entre o soluto e a solução. Porém é possivel determinar várias tipo de relações, que são dividas em físicas e químicas. A que não dependem da massa molar são chamadas de físicas e as que dependem são chamadas de química.</p>
+    <br><h4>Concentração em massa</h4><br>
+    <p>Ou concentração comum é definida pela quantidade de soluto que se encontra em volume-padrão de solução em g/L.</p>
+    <img src="concentração.png">
+    <p>Em que m<sub>1</sub> é referente a massa do soluto e V é referente ao volume do solvente. No nosso caso, tendo 34g de KCl dissolvido em 100ml de água, a concentração seria igual a:</p>
+    <img src="kcl-concentração1.png" alt="">
+    <img src="kcl-concentração2.png">
+    <p>A partir do coeficiente de solubilidade da solução, podemos definir a classificação da solução em relação a concentração de seu soluto em:</p>
+    <ul>
+        <li>Soluções insaturadas: em que a quantidade de soluto é menor que o máximo possível.</li>
+        <li>Soluções saturadas: em que a quantidade de soluto é igual ao máximo possível.</li>
+        <li>Soluções saturadas com corpo de fundo: em que a quantidade de soluto é maior que o máximo possível, portanto o excesso se deosita no fundo.</li>
+    </ul>
+    <p>Teste abaixo com nosso exemplo, KCl dissolvido em água:</p>
+    <br>
+        <div id="d1">
+            <label for="input1">Massa do Soluto:</label><br>
+            <input type="number" name="input1">g de KCl<br>
+            <label for="input2">Volume do Solução</label><br>
+            <input type="number" name="input2">L<br>
+            <button>Calcular</button>
+            <p></p>
+        </div>
+    <br><h4>Densidade de uma solução</h4><br>
+    <p>A densidade de uma solução será definada pela relação entre a massa e o volume dessa solução.</p>
+    <img src="densidade.png" alt="">
+    <p>, em que m refere-se a massa da solução e V refere-se ao volume da solução. Num exemplo, se a solução em questão tem 50g e 100mL, a densidade será:</p>
+    <img src="densidade-solução1.png" alt="">
+    <img src="densidade-solução2.png" alt="">
+    <br><br><h4>Título em massa</h4><br>
+    <p>O título de uma solução é definido pela relação da massa do soluto e a soma da massa do soluto com o solvente.</p>
+    <img src="titulo.png" alt="">
+    <p>Mas é normalmente expressado em porcentagem, para isso fazemos:</p>
+    <img src="titulo-porcentagem.png" alt="">
+    <br><br><h4>Densidade de uma mistura</h4><br>
+    <p>Como somente substâncias possuem densidade fixa, a densidade de misturas dependerá da quantidade de cada componente, determinada pela porcentagem em titulo de massa.</p>
+    <img src="densidade-mistura.png" alt="">
+    <br><br><h4>Titulo em volume</h4><br>
+    <p>Usado para exprimir a concentração de solução em que todos os componentes não são sólidos. É determinado pela razão entre o volume do soluto e o volume da solução</p>
+    <img src="titulo-volume.png" alt="">
+    <p>, em que V<sub>1</sub> refere-se ao volume do soluto e V refere-se ao volume da solução</p>
+    <p>E como no título em massa, pode ser definido em porcentagem com: </p>
+    <img src="titulo-volume-porcentagem.png" alt="">
+    <br><br><h4>Partes por milhão</h4><br>
+    <p>Definido pela razão de uma parte do soluto em 1 000 000 de partes da solução</p>
+    <img src="ppm.png" alt="">
+    <p>É usado para determinar particulas muito escassas em uma solução</p>
+    <br><h4>Concentração em mol</h4>
+    <p>É a concentração de matéria do soluto na solução, determinada pela razão entre o mol do soluto (n<sub>1</sub>) e o volume da solução.</p>
+    <img src="concentração-molar.png" alt="">
+        <div id="d2">
+            <label for="input1">Quantidade de matéria do Soluto:</label><br>
+            <input type="number" name="input1">mol de KCl<br>
+            <label for="input2">Volume do solução</label><br>
+            <input type="number" name="input2">L<br>
+            <button>Calcular</button>
+            <p></p>
+        </div>
+    <br><br><h3>Diluição e Concentração</h3>
+    <h4>Diluição</h4>
+    <p>Para se diluir uma solução é necessário adicionar solvente à solução.</p>
+    <h4>Concentração</h4>
+    <p>Para se concentrar uma solução é necessário retirar solvente da solução.</p>
+    <br><h3>Concentração de misturas</h3>
+    <h4>Misturas que não reagem entre si</h4>
+    <p>Para misturas que não reage entre si, basta determinarmos a concentração de cada soluto na solução final. Portanto é necessário apenas observar se são de soluto diferente ou soluto igual.</p>
+    <p><b>Solutos diferentes</b>: Devemos determinar a concentração de cada soluto na solução final, levando em conta a quantidade de cada soluto e o volume da solução final.</p>
+    <p><b>Solutos iguais</b>: Determinamos a concentração do soluto na solução final, levando em conta a quantidade do soluto e o volume final da solução.</p>
+    <h4>Misturas que reagem entre si</h4>
+    <p>Para misturas que reagem entre si, devemos assumir o processo quimico a partir da composição da solução final. A partir da proporção estequiométrica dos componetentes, podemos calculas a concentração dos produtos na solução final.</p>
+    <h3>Titulação de soluções</h3>
+    <p>Um outro meio de determinar a concentração de uma solução é por meio da reação de um volume conhecido desta com um volume conhecido de uma solução outra de concentração conhecida. A este processo chamamos de titulação</p>
+    <br><br>
+
+</body>
+</html>
